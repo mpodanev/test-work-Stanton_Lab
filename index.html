@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stanton Lab test work</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <header class="main-header">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="" class="main-nav__item-link main-nav__item--link1">
+              <i class="main-nav__item-icon"></i>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__item-link main-nav__item--link2">
+              <i class="main-nav__item-icon"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__item-link main-nav__item--link3">
+              <i class="main-nav__item-icon"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__item-link main-nav__item--link4">
+              <i class="main-nav__item-icon"></i>
+              <span>My plan</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__item-link main-nav__item--link5">
+              <i class="main-nav__item-icon"></i>
+              <span>Log out</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <form class="form" action="/" method="post">
+        <div class="form__location-wrapper">
+          <label class="form__location-label" for="location">Location</label>
+          <div class="form__location-input-wraper">
+              <input class="form__location-input" id="location" type="text">
+              <div class="form__location-input-border"></div>
+          </div>
+          <span class="form__location-span">or</span>
+          <button class="form__location-map-button" id="map-button"></button>
+        </div>
+        <div class="form__size-wrapper">
+          <label class="form__size-label" for="size">Size</label>
+          <div class="form__size-range-wrapper">
+            <input class="form__size-range visually-hidden" id="size" type="range" min="100" max="1000" step="1" value="100">
+            <div class="range range-wrapper">
+              <div class="range-slider" id="range-slider">
+                <div class="range-thumb" id="range-thumb"></div>
+                <div class="tooltip" id="tooltip"><span></span> m<sup>2</sup>
+                  <div class="tooltip-triangle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form__size-min"><span></span> m<sup>2</sup></div>
+            <div class="form__size-max"><span></span> m<sup>2</sup></div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <div class="popup-map visually-hidden" id="popup-map">
+    <div class="map-wrapper">
+      <div class="map" id="map"></div>
+      <div class="popup-map__place-wrapper"></div>
+      <button class="popup-map__close-btn" id="popup-map-close"></button>
+    </div>
+  </div>
+  <script src="js/script.min.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfECRMLjU7BheeYZvWNd_js0wH2Gno4fg&libraries=places&callback=initAutocomplete"
+  async defer></script>
+</body>
+
+</html>
